@@ -11,7 +11,6 @@
             <img src="./img/undraw_Traveling_re_weve (1).png">
             <img src="./img/Let’s Travel !.png">
         </div>
-    </section>
     <form action="" class="addTicket-form">
         <h1 class="title"><span><i class="plus-circle"></i>新增旅遊套票</span></h1>
         <div class="form-section">
@@ -97,18 +96,118 @@
         </div>
         <div class="form-section">
             <div class="addTicket-form">
-                <label for="ticketDescription">套票描述</label>
+                <label for="">套票描述</label>
                 <textarea id="ticketDescription" name="套票描述" placeholder="請填寫套票描述（限 100 字）"></textarea>
             </div>
+            <div class="alert-message">
+                <p id="ticketDescription-msg" data-msg="套票描述">
+                    <!--    <i class="fas plus-circle"></i>
+                      <span>必填!</span> -->
+                </p>
+            </div>
         </div>
-        
-
-
-
-           
+        <input type="button" class="addTicket-btn" value="新增套票">
     </form>
-    
+</section>
+<section class="area-search">
+    <div class="search-action">
+    <select name="" class="areaSearch">
+        <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+        <option value="">全部地區</option>
+        <option value="">台北</option>
+        <option value="">台中</option>
+        <option value="">高雄</option>
+    </select>
+    <p id="search-result">本次搜尋共 筆資料</p>
+</div>
+</section>
 
-    
+<ul class="tickitem-area">
+    <li class="ticketItem">
+        <div class="tickitem-Img">
+            <a href="#">
+                <img src="" alt="">
+            </a>
+            <div class="ticketItem-region">台北</div>
+            <div class="ticketItem-rank">8.6</div>
+        </div>
+        <div class="tickItem-content">
+            <h1>綠島自由行套裝行程</h1>
+            <p class="ticketItem-Description">
+                嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，
+                提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，
+                行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，
+                讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+            </p>
+        </div>
+        <div class="ticketCard-info">
+            <p class="ticketCard-num">
+              <span><i class="fas fa-exclamation-circle"></i></span>
+              剩下最後 <span id="ticketCard-num"> 8</span> 組
+            </p>
+            <p class="ticketCard-price">
+              TWD <span id="ticketCard-price">$1280</span>
+            </p>
+          </div>
+    </li>
+    <li>
+        <div class="tickitem-Img">
+            <a href="#">
+                <img src="" alt="">
+            </a>
+            <div class="ticketItem-region">台中</div>
+            <div class="ticketItem-rank">9.2</div>
+        </div>
+        <div class="tickItem-content">
+            <h1>南庄度假村露營車二日遊</h1>
+            <p class="ticketItem-Description">
+                南庄雲水豪華露營車，快來擁有最愜意的露營體驗吧！ 
+                一泊一食，輕鬆享受露營車樂趣。 
+                獨立衛浴與私人戶外露臺。 
+                入住豪華露營車還能使用戶外SPA大眾湯，感受美人湯魅力。
+            </p>
+        </div>
+        <div class="ticketCard-info">
+            <p class="ticketCard-num">
+              <span><i class="fas fa-exclamation-circle"></i></span>
+              剩下最後 <span id="ticketCard-num">2</span> 組
+            </p>
+            <p class="ticketCard-price">
+              TWD <span id="ticketCard-price">$2480</span>
+            </p>
+          </div>
+    </li>
+    <li>
+        <div class="tickitem-Img">
+            <a href="#">
+                <img src="" alt="">
+            </a>
+            <div class="ticketItem-region">高雄</div>
+            <div class="ticketItem-rank">8.6</div>
+        </div>
+        <div class="tickItem-content">
+            <h1>熊森公園親子二日遊套票</h1>
+            <p class="ticketItem-Description">
+                來自日本最受歡迎的兒童遊樂園《 BearSon Park 熊森公園》於全世界有800多家據點，
+                在全世界、日本及台灣，
+                很多小孩的童年都在遊戲愛樂園裡一同成長，
+                提供兒童一個最富教育性及娛樂性的休憩遊樂天地！
+            </p>
+        </div>
+        <div class="ticketCard-info">
+            <p class="ticketCard-num">
+              <span><i class="fas fa-exclamation-circle"></i></span>
+              剩下最後 <span id="ticketCard-num"> 3</span> 組
+            </p>
+            <p class="ticketCard-price">
+              TWD <span id="ticketCard-price">$2480</span>
+            </p>
+          </div>
+    </li>
+</ul>
+<div class="cantFind-area">
+    <h3>查無此關鍵字資料</h3>
+    <img src="https://i.imgur.com/dZI8FJQ.png" alt="">
+  </div>  
 </body>
 </html>
