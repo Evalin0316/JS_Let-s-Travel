@@ -1,27 +1,26 @@
  let data;
 
 //axios
-axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json') // ( /user/12345 ) 網址
-	//請求成功就會執行該 function
+axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json') 
   .then(function (response) {
-    console.log('資料已回傳');
+    console.log('資料回傳');
     data = response.data.data;
     init();
   });
 
-//選擇器
-const areaList = document.querySelector('.ticketCard-area');
+//cardselector
+const ticketCardarea = document.querySelector('.ticketCard-area');
 const searchNum = document.querySelector('#searchResult-text');
-//表單選擇器
-const ticketName = document.querySelector('#ticketCard-name');
+//form
+const ticketName = document.querySelector('#ticketName');
 const ticketImgUrl = document.querySelector('#ticketImageUrl');
-const ticketAreaPlace = document.querySelector('#ticketRegion');
+const ticketRegion = document.querySelector('#ticketRegion');
 const ticketPrice = document.querySelector('#ticketPrice');
-const ticketLevel = document.querySelector('#ticketStar');
+const ticketStar = document.querySelector('#ticketStar');
 const ticketGroup = document.querySelector('#ticketGroup');
-const ticketDes = document.querySelector('#ticketDescription');
+const ticketDescription = document.querySelector('#ticketDescription');
 const form = document.querySelector('form');
-//表單按鈕
+//button
 const addBtn = document.querySelector('.addTicket-btn');
 const filterLocal = document.querySelector('#regionSearch');
 
@@ -57,10 +56,10 @@ function listContentBox(){
     </li>`;
     str += content;
   });
-  areaList.innerHTML = str;
+  ticketCardarea.innerHTML = str;
 }
 
-//篩選器
+//selector
 function filterBox(){
   filterLocal.addEventListener('change',function(e){
     let str = '';
@@ -93,30 +92,29 @@ function filterBox(){
         </li>`;
         searchNum.textContent =`本次搜尋共 ${count} 筆資料`;
       }
-      areaList.innerHTML = str;
+      ticketCardarea.innerHTML = str;
     });
-    // filterLocal.value = '地區搜尋';
   });
 }
 filterBox();
 
-//新增表單
+
 function addTicketBox(){
   addBtn.addEventListener('click',function(e){
-    if(ticketLevel.value > 10 || ticketLevel.value <= 0){
-      alert('星級區間是 1-10 分，請重新填寫')
-      form.reset(); //清除表單內容
+    if(ticketStar.value > 10 || ticketStar.value <= 0){
+      alert('星級區間需是 1-10 分，請重新填寫')
+      form.reset();
       return
     }
     data.push({
-      id: Date.now(),//產生亂數
+      id: Date.now(),
       name: ticketName.value,
       imgUrl: ticketImgUrl.value,
-      area: ticketAreaPlace.value,
-      description:ticketDes.value,
+      area: ticketRegion.value,
+      description:ticketDescription.value,
       group: Number(ticketGroup.value),
       price: Number(ticketPrice.value),
-      rate:Number(ticketLevel.value)
+      rate:Number(ticketStar.value)
     })
     form.reset();//清除表單內容
     init();
