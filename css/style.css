@@ -330,10 +330,10 @@ img{
   .ticketCard-price {
 	display: flex;
 	align-items: center;
-  }z
+  }
   
   .ticketCard-price span {
-	font-size: 2rem;
+	font-size:30px;
   }
   
   .cantFind-area {

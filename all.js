@@ -26,12 +26,12 @@ const filterLocal = document.querySelector('#regionSearch');
 
 //初始化
 function init(){
-  listContentBox();
+  listContent();
   filterLocal.value == '全部地區';
   searchNum.textContent =`本次搜尋共 ${data.length} 筆資料`;
 }
 
-function listContentBox(){
+function listContent(){
   let str = '';
   data.forEach(function(item){
     let content = `<li class="ticketCard">
@@ -60,7 +60,7 @@ function listContentBox(){
 }
 
 //selector
-function filterBox(){
+function filterfn(){
   filterLocal.addEventListener('change',function(e){
     let str = '';
     let count = 0;
@@ -96,10 +96,10 @@ function filterBox(){
     });
   });
 }
-filterBox();
+filterfn();
 
 
-function addTicketBox(){
+function addTicket(){
   addBtn.addEventListener('click',function(e){
     if(ticketStar.value > 10 || ticketStar.value <= 0){
       alert('星級區間需是 1-10 分，請重新填寫')
@@ -120,7 +120,7 @@ function addTicketBox(){
     init();
   })
 }
-addTicketBox();
+addTicket();
 
 
 
