@@ -359,6 +359,15 @@ img{
 	}
   }
 
+  #chart {
+	width: 40%;
+  }
+  
+  @media (max-width: 992px) {
+	#chart {
+	  width: 70%;
+	}
+  }
 
 
 
