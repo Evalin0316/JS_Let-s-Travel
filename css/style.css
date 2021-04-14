@@ -128,7 +128,7 @@ img{
 	  background-color: #FAFAFA;
 	  border:none;
 	  border-bottom: 1px solid #00807E;
-	  width:60%;
+	  width:40%;
 	  text-indent: 0.5rem;
 	  font-size: 16px;
 	  min-height: 35px;
@@ -196,7 +196,7 @@ img{
   }
   
   .regionSearch {
-	width: 40%;
+	width: 10%;
 	min-height: 38px;
 	text-indent: 0.5rem;
 	color: #818A91;
@@ -210,7 +210,7 @@ img{
 	.regionSearch {
 	  margin-right: 0;
 	  margin-bottom: 10px;
-	  width: 80%;
+	  width: 60%;
 	}
   }
   
@@ -363,11 +363,7 @@ img{
 	width: 40%;
   }
   
-  @media (max-width: 992px) {
-	#chart {
-	  width: 70%;
-	}
-  }
+ 
 
 
 
